@@ -2,6 +2,7 @@
 	min-height: 100vh;
 	display: flex;
 	padding: 2rem 4rem;
+	overflow-x: hidden;
 	/* justify-content: center;
 	align-items: center; */
 }
@@ -105,17 +106,29 @@
 .about-me .intro p {
 	margin-block: 0.4rem;
 	line-height: 1.8rem;
-	color: rgba(255, 255, 255, 0.85); /* Slightly softer white */
+	color: rgba(255, 255, 255, 0.85);
 }
 
 .about-me .intro strong {
-	color: rgb(31, 195, 255); /* Your primary color */
+	color: rgb(31, 195, 255);
 	font-weight: 600;
+}
+
+@media screen and (max-width: 1200px) {
+	.about-me {
+		padding: 2rem 2rem;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.about-me {
+		padding: 1.5rem 1.5rem;
+	}
 }
 
 @media screen and (max-width: 768px) {
 	.about-me {
-		padding: 2rem 2rem;
+		padding: 1rem 1rem;
 		flex-direction: column;
 		align-items: center;
 		gap: 1rem;

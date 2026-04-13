@@ -4,6 +4,7 @@
 	flex-direction: column;
 	padding: 2rem 4rem;
 	gap: 2rem;
+	overflow-x: hidden;
 }
 
 SectionTitle {
@@ -114,6 +115,20 @@ SectionTitle {
 .form-group textarea {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	min-height: 120px;
+}
+
+@media screen and (max-width: 1024px) {
+	.contact-wrapper {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+
+	.contact-links-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.contact-section .title .primary-text {
+		margin-bottom: -10rem;
+	}
 }
 
 .submit-btn {
@@ -249,23 +264,9 @@ SectionTitle {
 }
 
 /* ========== RESPONSIVE ========== */
-@media screen and (max-width: 1024px) {
-	.contact-wrapper {
-		grid-template-columns: 1fr;
-		gap: 3rem;
-	}
-
-	.contact-links-grid {
-		grid-template-columns: repeat(3, 1fr);
-	}
-	.contact-section .title .primary-text {
-		margin-bottom: -10rem;
-	}
-}
-
 @media screen and (max-width: 768px) {
 	.contact-section {
-		padding: 1rem 2rem;
+		padding: 1rem 1rem;
 	}
 
 	.contact-form {
@@ -298,6 +299,10 @@ SectionTitle {
 	}
 	.contact-section .title .primary-text {
 		margin-bottom: -3.5rem;
+	}
+	.contact-wrapper {
+		grid-template-columns: 1fr;
+		gap: 1rem;
 	}
 }
 

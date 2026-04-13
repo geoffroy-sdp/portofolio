@@ -81,3 +81,51 @@
 .floating-btn.sec > span {
 	background-color: var(--accentHi);
 }
+
+@media screen and (max-width: 1200px) {
+	.floating-btn.first {
+		left: 10%;
+	}
+	.floating-btn.sec {
+		right: 10%;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.floating-btn.first {
+		left: 5%;
+	}
+	.floating-btn.sec {
+		right: 5%;
+	}
+	.floating-btn,
+	.floating-btn > div {
+		width: 120px;
+		height: 40px;
+	}
+	.floating-btn div {
+		font-size: 0.85rem;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.floating-btn,
+	.floating-btn > div {
+		width: 90px;
+		height: 32px;
+	}
+	.floating-btn div {
+		font-size: 0.7rem;
+	}
+	.floating-btn.first {
+		top: 8%;
+		left: 25%;
+		transform: translateX(-120%);
+	}
+	.floating-btn.sec {
+		bottom: 20%;
+		right: 50%;
+		transform: translateX(120%);
+		left: auto;
+	}
+}

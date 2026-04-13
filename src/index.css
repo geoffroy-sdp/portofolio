@@ -22,6 +22,7 @@
 html {
 	scrollbar-width: none;
 	scroll-behavior: smooth !important;
+	overflow-x: hidden;
 }
 
 * {
@@ -39,6 +40,8 @@ body {
 	color: var(--text);
 	cursor: none;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
+	width: 100%;
 }
 
 .container {

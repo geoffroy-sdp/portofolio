@@ -8,8 +8,8 @@
 	margin: auto;
 	padding: 2rem;
 	width: fit-content;
-	position: sticky;
-	top: 50vh;
+	position: relative;
+	overflow-x: hidden;
 }
 
 .title .primary-text {
@@ -39,6 +39,5 @@
 	}
 	.title {
 		position: relative;
-		top: 0rem;
 	}
 }

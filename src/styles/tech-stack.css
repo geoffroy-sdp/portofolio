@@ -2,6 +2,7 @@
 	min-height: 100vh;
 	display: flex;
 	padding: 2rem 4rem;
+	overflow-x: hidden;
 }
 
 .tech-stack .title {
@@ -37,9 +38,21 @@
 	font-family: 'Fugaz One', sans-serif;
 }
 
+@media screen and (max-width: 1200px) {
+	.tech-stack {
+		padding: 2rem 2rem;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.tech-stack {
+		padding: 1.5rem 1.5rem;
+	}
+}
+
 @media screen and (max-width: 700px) {
 	.tech-stack {
-		padding: 1rem 2rem;
+		padding: 1rem 1rem;
 		flex-direction: column-reverse;
 		gap: 1rem;
 	}
