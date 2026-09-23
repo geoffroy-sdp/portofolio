@@ -1,0 +1,219 @@
+.app-shell {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid rgba(232, 198, 136, 0.25);
+  border-radius: 18px;
+  background: rgba(19, 14, 12, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+.back-link,
+.hub-zone {
+  border: 1px solid rgba(232, 198, 136, 0.3);
+  background: rgba(81, 41, 30, 0.35);
+  color: #f7efe2;
+  font: inherit;
+}
+
+.back-link {
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.status-pill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(143, 92, 55, 0.2);
+  color: #f2d6a3;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+main {
+  margin-top: 32px;
+}
+
+.hub-shell,
+.page-shell {
+  padding: 32px 24px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(17, 12, 10, 0.95), rgba(28, 18, 12, 0.9));
+  border: 1px solid rgba(232, 198, 136, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.hub-scene {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 24px;
+  min-height: 500px;
+  place-items: stretch;
+}
+
+.hub-zone {
+  position: relative;
+  min-height: 220px;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  overflow: hidden;
+}
+
+.hub-zone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(214, 164, 74, 0.35), transparent 40%);
+}
+
+.hub-zone:hover,
+.hub-zone:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgba(232, 198, 136, 0.75);
+  box-shadow: 0 12px 28px rgba(120, 55, 35, 0.35);
+}
+
+.hub-zone > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hub-zone__label {
+  display: inline-flex;
+  border: 1px solid rgba(247, 239, 226, 0.3);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(17, 10, 9, 0.25);
+  margin-bottom: 12px;
+}
+
+.hub-zone__title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.hub-zone__description {
+  margin-top: 8px;
+  max-width: 20ch;
+  color: rgba(247, 239, 226, 0.8);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #d9b76d;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+}
+
+.page-shell h1,
+.page-shell h2 {
+  margin: 0 0 12px;
+}
+
+.page-shell h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: rgba(247, 239, 226, 0.8);
+  margin-bottom: 18px;
+}
+
+.body-copy {
+  max-width: 60ch;
+  color: rgba(247, 239, 226, 0.8);
+}
+
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: grid;
+  gap: 16px;
+}
+
+.content-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(232, 198, 136, 0.2);
+  background: rgba(60, 32, 22, 0.28);
+}
+
+.content-list li strong {
+  color: #f7efe2;
+}
+
+.content-list li span,
+.content-list li small {
+  color: rgba(247, 239, 226, 0.75);
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.skill-card {
+  padding: 20px;
+  border: 1px solid rgba(232, 198, 136, 0.2);
+  border-radius: 18px;
+  background: rgba(38, 24, 20, 0.6);
+}
+
+.skill-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.compact li {
+  padding: 10px 12px;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    width: min(100% - 20px, 1200px);
+    padding-top: 12px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hub-scene {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hub-zone {
+    min-height: 180px;
+  }
+}
